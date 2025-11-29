@@ -1,0 +1,24 @@
+.category-card {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.category-card:hover {
+  transform: scale(1.05);
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+}

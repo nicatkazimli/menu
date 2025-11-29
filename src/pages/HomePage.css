@@ -1,0 +1,109 @@
+/* --- GENERAL PAGE --- */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  overflow-x: hidden; /* mobil sağa-scroll problemini tam silir */
+}
+
+/* --- BANNER --- */
+.home-page .banner {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* banner üçün limit */
+}
+
+.home-page .banner img {
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(25,34,46,0.8);
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+/* --- INFO --- */
+.info {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* --- CATEGORY GRID --- */
+.categories-grid {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* kartlar arasında məsafə */
+  margin-bottom: 40px;
+}
+
+/* --- CATEGORY CARD --- */
+.category-card {
+  width: 100%;
+  height: 220px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(25,34,46,0.5);
+}
+
+/* Hover effect (desktop üçün) */
+.category-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(25,34,46,0.9);
+}
+
+.category-card .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.category-card h2 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 480px) {
+  .home-page .banner img {
+    height: 260px;  /* mobil üçün kiçik banner */
+  }
+
+  .category-card {
+    height: 180px; /* mobil üçün kart boyu */
+    margin-left: -1px;
+  }
+
+  .banner-text {
+    font-size: 1.5rem;
+  }
+
+  .category-card h2 {
+    font-size: 1.3rem;
+  }
+}

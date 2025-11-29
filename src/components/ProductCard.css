@@ -1,0 +1,97 @@
+/* --- PRODUCT GRID (desktop 4/4, mobile 1/1) --- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* desktop 4 column */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px 0;
+}
+
+/* Mobile 1/1 */
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* mobile 1 column */
+    padding: 10px;
+  }
+}
+
+/* --- CARD --- */
+.product-card {
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(28,44,51,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER (desktop only) */
+@media (min-width: 481px) {
+  .product-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(17, 32, 49, 0.45);
+  }
+}
+
+/* --- IMAGE (all same size) --- */
+.product-card img {
+  width: 180px;
+  height: 200px;
+  object-fit: cover;       /* eyni görünüş üçün ideal */
+  flex-shrink: 0;
+}
+
+/* --- INFO --- */
+.product-info {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #232323;
+}
+
+.product-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f6399;
+}
+
+/* --- MOBILE RESPONSIVE (still left image, right text) --- */
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+    max-width: 95%;
+  }
+ .product-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(17, 32, 49, 0.45);
+  }
+  .product-card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 1.7rem;
+  }
+}
