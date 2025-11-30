@@ -1,17 +1,35 @@
+/* --- BACKGROUND FIX --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#root, html {
+  background: transparent !important;
+}
+
+/* Bütün HomePage content şəffaf olsun */
+.home-page,
+.home-page * {
+}
+
 /* --- GENERAL PAGE --- */
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  overflow-x: hidden; /* mobil sağa-scroll problemini tam silir */
+  overflow-x: hidden;
 }
 
 /* --- BANNER --- */
 .home-page .banner {
   position: relative;
   width: 100%;
-  max-width: 600px; /* banner üçün limit */
+  max-width: 600px;
 }
 
 .home-page .banner img {
@@ -31,6 +49,7 @@
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  
 }
 
 /* --- INFO --- */
@@ -39,6 +58,7 @@
   margin: 20px 0;
   font-size: 1rem;
   line-height: 1.4;
+    color: rgb(52, 47, 47);
 }
 
 /* --- CATEGORY GRID --- */
@@ -47,7 +67,7 @@
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* kartlar arasında məsafə */
+  gap: 20px;
   margin-bottom: 40px;
 }
 
@@ -65,7 +85,6 @@
   box-shadow: 0 5px 15px rgba(25,34,46,0.5);
 }
 
-/* Hover effect (desktop üçün) */
 .category-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 10px 20px rgba(25,34,46,0.9);
@@ -88,16 +107,25 @@
   text-shadow: 0 0 6px rgba(0,0,0,0.7);
 }
 
-/* --- MOBILE RESPONSIVE --- */
+/* --- MOBILE --- */
 @media (max-width: 480px) {
   .home-page .banner img {
-    height: 260px;  /* mobil üçün kiçik banner */
+    height: 260px;
   }
 
   .category-card {
-    height: 180px; /* mobil üçün kart boyu */
+    height: 200px;
     margin-left: -1px;
+     box-shadow: 0 5px 15px rgba(39, 187, 28, 0.5);
+    
   }
+  body {
+  background-image: url("https://i.pinimg.com/736x/c4/65/49/c46549877c6dea1b63f053b805144dd8.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: repeat !important;
+  background-attachment: fixed !important;
+}
 
   .banner-text {
     font-size: 1.5rem;
@@ -105,5 +133,12 @@
 
   .category-card h2 {
     font-size: 1.3rem;
+  }
+  .info{
+    color: white;
+    backdrop-filter: blur(30px);
+    width: 430px;
+    border-radius: 12px;
+     box-shadow: 0 5px 15px rgba(39, 187, 28, 0.5);
   }
 }
