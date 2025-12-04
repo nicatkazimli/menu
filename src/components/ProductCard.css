@@ -109,7 +109,7 @@
     width: 100%;
     max-width: 95%;
     box-shadow: 0 5px 15px rgba(39, 187, 28, 0.5);
-     height: 250px;
+     height: 300px;
   }
  .product-card:hover {
     transform: translateY(-5px) scale(1.03);
@@ -117,7 +117,7 @@
   }
   .product-card img {
     width: 200px;
-    height: 250px;
+    height: 300px;
   }
 
   .product-card::before {
