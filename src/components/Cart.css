@@ -5,7 +5,7 @@
   padding: 1.2rem;
   max-height: 600px;
   width: 350px;
-  margin-left: -8px;
+  margin-left: -12px;
   overflow-y: auto;
   background: linear-gradient(145deg, #ffffff, #f5f5f5);
   box-shadow: 0 10px 25px rgba(34, 26, 55, 0.4), 0 6px 10px rgba(0, 0, 0, 0.05);
@@ -105,11 +105,11 @@
 /* Mobile Responsive */
 @media (max-width: 480px) {
   .cart {
-    max-height: 400px;
+    max-height: 340px;
     width: 330px;
     padding: 1rem;
-    margin-left: 12px;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
   }
   .cart p {
     text-align: center;
