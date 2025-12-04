@@ -1,0 +1,127 @@
+.cart {
+  flex: 1;
+  border-radius: 15px;
+  margin-left: 20px;
+  padding: 1.2rem;
+  max-height: 600px;
+  overflow-y: auto;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  box-shadow: 0 10px 25px rgba(34, 26, 55, 0.4), 0 6px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cart-footer{
+    margin-left: 8px;
+}
+ .cart p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+.cart:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 8px 15px rgba(0, 0, 0, 0.07);
+}
+
+.cart h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cart li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cart li span {
+  max-width: 75%;
+  word-break: break-word;
+  color: #333;
+  font-weight: 500;
+}
+
+.cart li button {
+  background: linear-gradient(135deg, #ff4d4f, #ff7875);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.cart li button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.clear-cart {
+  display: block;
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 0.6rem;
+  background: linear-gradient(135deg, #ff4d4f, #ff7875);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.clear-cart:hover {
+  background: linear-gradient(135deg, #ff7875, #ff4d4f);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .cart {
+    max-height: 400px;
+    width: 400px;
+    padding: 1rem;
+    margin-left: -5px;
+  }
+  .cart p {
+    text-align: center;
+  }
+  .cart h2 {
+    font-size: 1.5rem;
+  }
+  .cart li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart li button {
+    margin-top: 5px;
+  }
+  .clear-cart {
+    padding: 0.5rem;
+  }
+}

@@ -18,8 +18,8 @@
 /* --- CARD --- */
 .product-card {
   width: 100%;
-  max-width: 320px;
-  height: 200px;
+  max-width: 420px;
+  height: 250px;
   display: flex;
   background: #ffffff;
   border-radius: 12px;
@@ -27,6 +27,34 @@
   box-shadow: 0 3px 10px rgba(28,44,51,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+}
+.product-card h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+
+  white-space: normal;      /* Uzun mətnləri normal sətirə salır */
+  word-break: break-word;   /* Mətn çox olsa belə dağılmır */
+  overflow-wrap: anywhere;  /* Uzun sözləri belə sətirə uyğun edir */
+}
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(165deg, #b29781, #480f20);
+  opacity: 0.12;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.75s ease;
+  z-index: 0;
+}
+.product-card:hover::before {
+  transform: scaleX(1);
+}
+.product-card  {
+  position: relative;
+  z-index: 2;
 }
 
 /* HOVER (desktop only) */
@@ -40,7 +68,7 @@
 /* --- IMAGE (all same size) --- */
 .product-card img {
   width: 180px;
-  height: 200px;
+  height: 250px;
   object-fit: cover;       /* eyni görünüş üçün ideal */
   flex-shrink: 0;
 }
@@ -54,10 +82,13 @@
 }
 
 .product-info h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #232323;
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #2e2418, #db8aa7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .product-info p {
@@ -87,6 +118,25 @@
     width: 200px;
     height: 200px;
   }
+
+  .product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(165deg, #b29781, #480f20);
+  opacity: 0.12;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.75s ease;
+  z-index: 0;
+}
+.product-card:hover::before {
+  transform: scaleX(1);
+}
+.product-card  {
+  position: relative;
+  z-index: 2;
+}
 
   .product-info h3 {
     font-size: 1rem;
