@@ -4,7 +4,7 @@
   margin-left: 20px;
   padding: 1.2rem;
   max-height: 600px;
-  width: 330px;
+  width: 350px;
   overflow-y: auto;
   background: linear-gradient(145deg, #ffffff, #f5f5f5);
   box-shadow: 0 10px 25px rgba(34, 26, 55, 0.4), 0 6px 10px rgba(0, 0, 0, 0.05);
@@ -105,9 +105,10 @@
 @media (max-width: 480px) {
   .cart {
     max-height: 400px;
-    width: 300px;
+    width: 320px;
     padding: 1rem;
-    margin-left: 35px;
+    margin-left: 27px;
+    margin-bottom: 10px;
   }
   .cart p {
     text-align: center;
