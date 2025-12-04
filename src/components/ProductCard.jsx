@@ -40,7 +40,7 @@ const ProductCard = ({ product, addToCart }) => {
     addToCart?.(product);
   }}
 >
-  Add to Cart
+  Əlavə et
 </button>
 
       </div>
